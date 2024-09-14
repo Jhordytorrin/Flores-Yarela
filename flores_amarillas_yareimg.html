@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas - Viernes 13</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            position: relative;
+            background-image: url('small-flower.png'); /* Imagen de fondo para flores blancas pequeñas */
+            background-repeat: repeat;
+            background-size: 40px 40px; /* Tamaño de las flores blancas pequeñas */
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+        /* Contenedor de las flores principales */
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            margin-bottom: 200px;
+        }
+
+        .flower {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            animation: sway 3s infinite ease-in-out;
+        }
+
+        @keyframes sway {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(10deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .flower .petal {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: yellow;
+            border-radius: 50%;
+        }
+
+        .flower .petal:nth-child(1) {
+            top: 0;
+            left: 45px;
+        }
+
+        .flower .petal:nth-child(2) {
+            top: 45px;
+            left: 90px;
+        }
+
+        .flower .petal:nth-child(3) {
+            top: 90px;
+            left: 45px;
+        }
+
+        .flower .petal:nth-child(4) {
+            top: 45px;
+            left: 0;
+        }
+
+        .flower .center {
+            position: absolute;
+            top: 45px;
+            left: 45px;
+            width: 60px;
+            height: 60px;
+            background: orange;
+            border-radius: 50%;
+        }
+
+        .flower .stem {
+            position: absolute;
+            top: 150px;
+            left: 72px;
+            width: 6px;
+            height: 200px;
+            background: green;
+            animation: sway-stem 3s infinite ease-in-out;
+        }
+
+        @keyframes sway-stem {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(-10deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Imagen en el centro */
+        .image-center {
+            width: 300px;
+            height: 300px;
+            margin: 40px auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-center img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        /* Fuegos artificiales */
+        @keyframes firework {
+            0% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1.5); }
+            100% { opacity: 0; transform: scale(2); }
+        }
+
+        .firework {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: red;
+            border-radius: 50%;
+            opacity: 0;
+            animation: firework 2s infinite ease-out;
+        }
+
+        .firework:nth-child(2) { background-color: blue; }
+        .firework:nth-child(3) { background-color: yellow; }
+        .firework:nth-child(4) { background-color: green; }
+        .firework:nth-child(5) { background-color: purple; }
+    </style>
+</head>
+<body>
+    <h1>¡Feliz Viernes 13 Yarela! Son reales porque soy programador :D</h1>
+
+    <!-- Imagen central -->
+    <div class="image-center">
+        <img src="yarela.jpg" alt="Imagen central">
+    </div>
+
+    <!-- Fuegos artificiales -->
+    <div class="firework" style="top: 50px; left: 10%;"></div>
+    <div class="firework" style="top: 150px; left: 80%;"></div>
+    <div class="firework" style="top: 200px; left: 50%;"></div>
+    <div class="firework" style="top: 30px; left: 60%;"></div>
+    <div class="firework" style="top: 100px; left: 20%;"></div>
+
+    <!-- Flores principales -->
+    <div class="container">
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+            <div class="stem"></div>
+        </div>
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+            <div class="stem"></div>
+        </div>
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+            <div class="stem"></div>
+        </div>
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+            <div class="stem"></div>
+        </div>
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+            <div class="stem"></div>
+        </div>
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+            <div class="stem"></div>
+        </div>
+    </div>
+</body>
+</html>
